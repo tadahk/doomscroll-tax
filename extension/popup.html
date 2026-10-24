@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>doomscroll tax</title>
+<style>
+  :root { color-scheme: light dark; --fg: #222; --bg: #fafafa; --mute: #888; --line: #ddd; }
+  @media (prefers-color-scheme: dark) { :root { --fg: #ddd; --bg: #1b1b1b; --line: #333; } }
+  body { margin: 0; width: 260px; padding: 14px 16px; font: 13px/1.45 ui-monospace, Menlo, monospace; color: var(--fg); background: var(--bg); }
+  label { display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+  h1 { font-size: 13px; font-weight: 600; margin: 0; }
+  .note { color: var(--mute); margin: 6px 0 10px; }
+  #sites { border-top: 1px solid var(--line); padding-top: 8px; }
+  #sites label { padding: 2px 0; }
+</style>
+</head>
+<body>
+<label><h1>doomscroll tax</h1><input type="checkbox" id="on"></label>
+<p class="note">feeds scroll slower the longer you scroll. closing the tab resets it.</p>
+<div id="sites"></div>
+<script src="popup.js"></script>
+</body>
+</html>

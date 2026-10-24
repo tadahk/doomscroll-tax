@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "doomscroll tax",
+  "version": "1.0.0",
+  "description": "the longer you scroll a feed, the slower the page scrolls. close the tab and it resets.",
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.x.com/*",
+        "*://*.twitter.com/*",
+        "*://*.reddit.com/*",
+        "*://*.facebook.com/*",
+        "*://*.instagram.com/*",
+        "*://*.linkedin.com/*",
+        "*://*.threads.net/*",
+        "*://*.threads.com/*",
+        "*://*.bsky.app/*",
+        "*://*.tumblr.com/*",
+        "*://*.pinterest.com/*",
+        "*://*.youtube.com/*",
+        "*://*.news.ycombinator.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "doomscroll tax",
+    "default_icon": {
+      "16": "icons/16.png",
+      "32": "icons/32.png"
+    }
+  },
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
+}
